@@ -47,7 +47,7 @@ while true
     #list the data items with their index
     index = 0
     while index < items.length
-      puts items[index].print_info
+      items[index].print_info
       index += 1
     end
   elsif input == "D"
