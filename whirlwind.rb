@@ -15,6 +15,7 @@
 #   puts "That's the future!"
 # end
 #Exercise 5: Write a program that will average 3 numeric exam grades, return an average test score, a corresponding letter grade, and a message stating whether the student is passing.
+
 puts "Input exam grade one:"
 exam_one = gets.chomp.to_i
 puts "Input exam grade two:"
@@ -27,10 +28,8 @@ def list_grade(exam_one, exam_two, exam_three)
 end
 
 def average_grade(exam_one, exam_two, exam_three)
-  average = ((exam_one + exam_two + exam_three) / 3)
+  average_grade = ((exam_one + exam_two + exam_three) / 3)
 end
-
-average = average_grade(exam_one, exam_two, exam_three).to_i
 
 def letter_grade(average_grade)
   if average_grade < 59
