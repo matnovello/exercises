@@ -31,14 +31,17 @@ def average_grade(exam_one, exam_two, exam_three)
   average_grade = ((exam_one + exam_two + exam_three) / 3)
 end
 
+average_grade = average_grade(exam_one, exam_two, exam_three)
+p average_grade
+
 def letter_grade(average_grade)
   if average_grade < 59
     puts "Grade: F"
-    elseif average_grade >= 60 && average_grade <= 69
+  elsif average_grade >= 60 && average_grade <= 69
     puts "Grade: D"
-  elsif average_grade > 70 & average_grade <= 79
+  elsif average_grade > 70 && average_grade <= 79
     puts "Grade: C"
-    elseif average_grade >= 80 && average_grade <= 89
+  elsif average_grade >= 80 && average_grade <= 89
     puts "Grade: B"
   elsif average_grade >= 90
     puts "Grade: A"
@@ -54,6 +57,6 @@ def pass_fail(average_grade)
 end
 
 list_grade(exam_one, exam_two, exam_three)
-puts "Average #{average_grade}"
-lettergrade(average)
-pass_fail(average)
+puts "Average grade is:  #{average_grade}"
+letter_grade(average_grade)
+pass_fail(average_grade)
