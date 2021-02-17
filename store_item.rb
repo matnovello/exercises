@@ -1,20 +1,12 @@
 #Build a command line application to create/read/update/delete your store items.
 
 class Item
-  attr_accessor :name
+  attr_accessor :name, :price, :category
 
   def initialize(input_options)
     @name = input_options[:name]
     @price = input_options[:price]
     @category = input_options[:category]
-  end
-
-  def price
-    @price
-  end
-
-  def category
-    return @category
   end
 
   def print_info
@@ -25,11 +17,11 @@ end
 item1 = Item.new({ :name => "soup", :price => 88, :category => "canned goods" })
 
 item2 = Item.new({ :name => "dog food", :price => 29, :category => "supplies" })
-item1.print_info
-item1.name = "spaghetti-Os"
-p item1.name
 
-puts item2.print_info
+items = [
+  item1,
+  item2,
+]
 
 while true
   puts "[C]reate " + "[R]ead " + "[D]elete " + "[Q]uit "
@@ -55,7 +47,7 @@ while true
     #list the data items with their index
     index = 0
     while index < items.length
-      puts item.print_info
+      puts items[index].print_info
       index += 1
     end
   elsif input == "D"
