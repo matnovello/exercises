@@ -20,15 +20,18 @@ exam_one = gets.chomp.to_i
 puts "Input exam grade two:"
 exam_two = gets.chomp.to_s
 puts "Input exam grade three:"
-exam_3 = gets.chomp.to_i
-def list_grade(exam_one exam_two exam_three)
+exam_three = gets.chomp.to_i
+
+def list_grade(exam_one, exam_two, exam_three)
   puts "Exams: #{exam_one}, #{exam_two}, #{exam_three}"
 end
+
 def average_grade(exam_one, exam_two, exam_three)
-  average = (exam_one + exam_two + exam_three) / 3)
+  average = ((exam_one + exam_two + exam_three) / 3)
 end
 average = average_grade(exam_one, exam_two, exam_three).to_i
-def letter_grade(average-grade)
+
+def letter_grade(average_grade)
   if average_grade < 59
     puts "Grade: F"
   elseif average_grade >= 60 && average_grade <= 69
