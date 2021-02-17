@@ -24,12 +24,11 @@ end
 
 item1 = Item.new({ :name => "soup", :price => 88, :category => "canned goods" })
 
-# item2 = Item.new("dog treats", 20, "pet food")
-# item3 = Item.new("lays chips", 5, "snack stuff")
-
+item2({ :name => "dog food", :price => 29, :category => "supplies" })
 item1.print_info
 item1.name = "spaghetti-Os"
 p item1.name
+
 # puts item2.print_info
 # puts item3.print_info
 
