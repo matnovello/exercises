@@ -24,51 +24,51 @@ end
 
 item1 = Item.new({ :name => "soup", :price => 88, :category => "canned goods" })
 
-item2({ :name => "dog food", :price => 29, :category => "supplies" })
+item2 = Item.new({ :name => "dog food", :price => 29, :category => "supplies" })
 item1.print_info
 item1.name = "spaghetti-Os"
 p item1.name
 
-# puts item2.print_info
-# puts item3.print_info
+puts item2.print_info
 
-# while true
-#   puts "[C]reate " + "[R]ead " + "[D]elete " + "[Q]uit "
-#   input = gets.chomp.upcase
+while true
+  puts "[C]reate " + "[R]ead " + "[D]elete " + "[Q]uit "
+  input = gets.chomp.upcase
 
-#   if input == "C"
-#     #make a new hash in items and store variables inside it
-#     #add hash to items array... how?
+  if input == "C"
+    #make a new hash in items and store variables inside it
+    #add hash to items array... how?
 
-#     while true
-#       puts "name:"
-#       name = gets.chomp
-#       puts "price"
-#       price = gets.chomp
-#       puts "category"
-#       category = gets.chomp
+    while true
+      items = []
+      puts "name:"
+      name = gets.chomp
+      puts "price"
+      price = gets.chomp
+      puts "category"
+      category = gets.chomp
 
-#       items << Item.new(name, price, category)
-#       break
-#     end
-#   elsif input == "R"
-#     #list the data items with their index
-#     index = 0
-#     while index < items.length
-#       puts item.print_info
-#       index += 1
-#     end
-#   elsif input == "D"
-#     #delete data items
-#     puts "give me an index for the item you would like to delete"
-#     input = gets.chomp.to_i
+      items << Item.new({ :name => name, :price => price, :category => category })
+      break
+    end
+  elsif input == "R"
+    #list the data items with their index
+    index = 0
+    while index < items.length
+      puts item.print_info
+      index += 1
+    end
+  elsif input == "D"
+    #delete data items
+    puts "give me an index for the item you would like to delete"
+    input = gets.chomp.to_i
 
-#     items.delete_at(input)
-#     puts "ok, deleted #{items[input]}"
-#     p items
-#   elsif input == "Q"
-#     #quit program
-#     puts "ok, you quit"
-#     break
-#   end
-# end
+    items.delete_at(input)
+    puts "ok, deleted #{items[input]}"
+    p items
+  elsif input == "Q"
+    #quit program
+    puts "ok, you quit"
+    break
+  end
+end
